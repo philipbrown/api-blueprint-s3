@@ -1,0 +1,20 @@
+{
+    "algio": {
+        "themeVariables": "",
+        "themeTemplate": ""
+    },
+    "prod": {
+        "key": "",
+        "secret": "",
+        "region": "",
+        "bucket":"",
+        "distribution_id":""
+    },
+    "dev": {
+        "key": "",
+        "secret": "",
+        "region": "",
+        "bucket":"",
+        "distribution_id":""
+    }
+}
