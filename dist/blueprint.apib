@@ -1,0 +1,68 @@
+FORMAT: 1A
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere dapibus ultrices. Praesent ac lacus sit amet lacus blandit porta et et neque. Donec nisi nulla, euismod nec tellus ac, vehicula sollicitudin diam. Sed id malesuada dolor. Vivamus nec eleifend mauris, vitae scelerisque quam. In pharetra id nulla ut elementum. Integer at lacus eget mi maximus ultrices in quis velit. In sollicitudin tincidunt varius. Nam pretium molestie ex id accumsan. Duis pharetra fermentum mi, non semper diam elementum non. Proin molestie tincidunt risus a laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Integer ac turpis cursus, cursus risus at, ullamcorper magna. Suspendisse mollis malesuada nisl ut consectetur.
+
+# Group Users
+
+Cras luctus scelerisque quam eu pulvinar. Nullam quis urna scelerisque, vestibulum turpis ullamcorper, commodo nulla. Cras commodo consectetur libero, sit amet sollicitudin metus vehicula sit amet. Ut maximus odio neque. Sed vitae mi id orci fermentum consectetur ut ut quam. Suspendisse potenti. Phasellus sed nibh a quam dictum tincidunt. In gravida commodo mauris vitae luctus.
+
+Nulla pretium ante tellus, in faucibus nulla ullamcorper ut. Sed magna est, ullamcorper in velit vulputate, fringilla pharetra ex. Integer eget mi in odio tincidunt tristique non eget sem. Suspendisse potenti. Suspendisse potenti. Cras eu dolor at ante aliquam facilisis. Aliquam lacinia turpis sed lorem molestie, non tincidunt arcu pulvinar. Nulla ac risus vehicula, lobortis felis non, varius lacus. Ut et tellus sit amet dui vulputate malesuada et ac augue.
+
+## Users Collection [/users]
+
+### GET
+
++ Response 200 (application/json)
+  + Attributes
+      - data (array[User Full])
+
+### POST
+
++ Request (application/json)
+    + Attributes (User Create)
+
++ Response 200 (application/json)
+    + Attributes
+        - data (User Full)
+
+## Users Resource [/users/{id}]
+
+### GET
+
++ Parameters
+  + id: `de0cc5df-6d70-45b8-97be-c11aadf8a70a` - The user's unique id
+
++ Response 200 (application/json)
++ Attributes
+    - data (User Full)
+
+### PATCH
+
++ Request (application/json)
+  + Attributes (User Update)
+
++ Response 200 (application/json)
+  + Attributes
+      - data (User Full)
+
+### DELETE
++ Request (application/json)
+
++ Response 204 (application/json)
+
+# Data Structures
+
+## User Full (object)
+- id: `de0cc5df-6d70-45b8-97be-c11aadf8a70a` (string) - The user's unique id
+- name: `Jane Smith` - The user's name
+- email: `jane@smith.com` - The user's email address
+
+## User Create (object)
+- name: `John Smith` (string, required) - The user's name
+- email: `john@smith.com` (string, required) - The user's email address
+
+## User Updated (object)
+- name: `John Smith` (string) - The user's name
+- email: `john@smith.com` (string) - The user's email address
